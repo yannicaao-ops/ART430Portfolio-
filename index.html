@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="Student Portfolio" content="Student Portfolio">
+  <link rel="stylesheet" href="styles.css?v=1.0">
+
+</head>
+
+
+
+<body style="background: #333333 url('images/pexels-pixabay-255464.jpg');">
+<div class="snow-container" 
+     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+     pointer-events: none; overflow: hidden; z-index: 9999;">
+</div>
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".snow-container");
+
+    function createFlake() {
+        const flake = document.createElement("img");
+
+        // 🌸 Change this to your flower image file
+        flake.src = "images/flower.png";
+
+        flake.style.position = "absolute";
+        flake.style.top = "-20px";
+        flake.style.left = Math.random() * window.innerWidth + "px";
+        flake.style.width = (20 + Math.random() * 30) + "px";
+        flake.style.pointerEvents = "none";
+        flake.style.opacity = Math.random();
+
+        const fallDuration = 5 + Math.random() * 5;
+        flake.style.transition = `transform ${fallDuration}s linear, opacity ${fallDuration}s linear`;
+
+        container.appendChild(flake);
+
+        // start animation
+        requestAnimationFrame(() => {
+            flake.style.transform = `translateY(${window.innerHeight + 50}px) rotate(${Math.random()*360}deg)`;
+            flake.style.opacity = "0.2";
+        });
+
+        // remove when finished
+        setTimeout(() => flake.remove(), fallDuration * 1000);
+    }
+
+    setInterval(createFlake, 300); // new flake every 0.3s
+});
+</script>
+
+
+
+
+	<!-- Add all your personal information here -->
+	<header>
+		<!-- Add your name below -->
+		<h1>AO, MAN IN</h1>
+		<!-- Below you can add an image of yourself.
+				If you don't want to put your own image, that is fine.
+					You can either delete the entire image tag or you can just add a funny image -->
+		<img src="images/self.jpg" />
+		<!-- Add a personal bio below -->
+		<p>
+			Artist Statement : Born in Macau and currently based in California, I am a multidisciplinary artist working across painting, clay, and mixed media. With a background in social work and cultural studies, my practice explores personal identity, ideology, and myth, blending subjective narratives with raw expression. Art, to me- is an ongoing journey into the unknown, a space to reflect, transform, and discover meaning through creation.
+		</p>
+	</header>
+	
+	
+	
+	
+	<!-- Copy and paste the whole <section></section> below to add as many projects as you like -->
+	<section>
+		<!-- Change the project name below -->
+		<h2>8-bit Augmentation</h2>
+		<!-- Change the image name below to match what you have dropped into the image folder -->
+		<img src="images/assignment2.jpg" />
+		<!-- Change the description below and add something about your project -->
+		<p>I created an 8-bit character for taking photos!</p>
+	</section>
+	
+	<section>
+		<!-- Change the project name below -->
+		<h2>Upcycling an Object</h2>
+		<!-- Change the image name below to match what you have dropped into the image folder -->
+		<img src="images/assignment4.jpg" />
+		<!-- Change the description below and add something about your project -->
+		<p>I UPCYCLING an old object and giving it life again for reuse!</p>
+	</section>	
+	
+	<section>
+		<!-- Change the project name below -->
+		<h2>3d Modeling-The Maw of the Wastes</h2>
+		<!-- Change the image name below to match what you have dropped into the image folder -->
+		<img src="images/assignment5.png" />
+		<img src="images/IMG_8972.JPG" />
+		<!-- Change the description below and add something about your project -->
+		<p>I create a fictional animal using SculptGL and printed it out with my 3D printer!</p>
+	</section>		
+	
+	<section>
+		<!-- Change the project name below -->
+		<h2>Create a Bob Ross Painting and 2D Animation</h2>
+		<!-- Change the image name below to match what you have dropped into the image folder -->
+		<img src="images/assignment7.png" />
+		<img src="images/AOMANIN_assignmennt11_walking-eveningV2.gif" />
+		<!-- Change the description below and add something about your project -->
+		<p>I use Kyle's Brushes with other Photoshop techniques to create a Bob Ross inspired digital landscape painting, after that, I use the animation techniques in Photoshop, create a simple 2d animation with the painting.</p>
+	</section>	
+	
+	<section>
+		<!-- Change the project name below -->
+		<h2>Lost Pet Poster</h2>
+		<!-- Change the image name below to match what you have dropped into the image folder -->
+		<img src="images/AOMANIN-Unit 10Assignment _Lost Pet Poster.jpg" />
+		<!-- Change the description below and add something about your project -->
+		<p>I morphed animal, combining two or more animals together with the Adobe Photoshop to create a Lost Pet Poster!</p>
+	</section>	
+		
+	<section>
+		<!-- Change the project name below -->
+		<h2>Animated GIF MEME</h2>
+		<!-- Change the image name below to match what you have dropped into the image folder -->
+		<img src="images/AOMANIN_assignmennt12.gif" />
+		<!-- Change the description below and add something about your project -->
+		<p>I create an Christmas animated GIF using the video import as layers function in Photoshop!</p>
+	</section>		
+	
+	<section>
+		<!-- Change the project name below -->
+		<h2>Exquisite Corpse</h2>
+		<!-- Change the image name below to match what you have dropped into the image folder -->
+		<img src="images/AOMANIN_exquisite_corpse_template2.jpg" />
+		<img src="images/AOMANIN_exquisite_corpse_template_TOP.jpg" />
+		<!-- Change the description below and add something about your project -->
+		<p>I work with my classmate to create the Exquisite Corpse Creatures! I created the top portion of an exquisite corpse composition, and combined with my classmate's middle and bottom portion!</p>
+	</section>		
+		
+	
+	
+</body>
+</html>
